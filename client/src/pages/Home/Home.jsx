@@ -11,7 +11,7 @@ const Home = () => {
     const porPagina = 8
     const ultimoElemento = pagina*porPagina
     const primerElemento = ultimoElemento - porPagina
-    const actualQuotes = orders.slice(primerElemento, ultimoElemento)
+    const actualOrders = orders.slice(primerElemento, ultimoElemento)
     const totalPages = Math.ceil(orders.length / porPagina);
     const pageNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
@@ -30,7 +30,7 @@ const Home = () => {
                         <th className={style.th}>Evento actual</th>
                         <th className={style.th}>Estado</th>
                         </tr>
-                        {orders.map((orden) => (
+                        {actualOrders.map((orden) => (
                         <tr className={style.tr} key={orden.id}>
                           <td className={style.td}>{orden.id}</td>
                             <td className={style.td}>{orden.externalOrderNumber}</td>
