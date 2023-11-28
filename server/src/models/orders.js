@@ -8,10 +8,6 @@ module.exports = (sequelize) => {
             allowNull: false,
             primaryKey: true,
           },
-          externalOrderNumber: {
-            type: DataTypes.STRING,
-            allowNull: true,
-          },
           actual_event: {
             type: DataTypes.STRING,
             allowNull: true,
