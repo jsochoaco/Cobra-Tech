@@ -1,7 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
-const routers = require("./routes"); // Asegúrate de que la ruta a tus rutas sea correcta.
+const routers = require("./routes/"); // Asegúrate de que la ruta a tus rutas sea correcta.
 const server = express();
 //===MIDDLEWARES
 server.use(morgan("dev")); // Morgan con el formato "dev" para registrar las solicitudes en la consola.
