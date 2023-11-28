@@ -1,0 +1,9 @@
+body {
+    /* background-color: #43b6fd; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+}
