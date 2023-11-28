@@ -1,0 +1,183 @@
+/* DIVS PRINCIPALES */
+.divContenedor {
+    display: flex;
+    flex-direction: row;
+}
+.divPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+/* TITULOS */
+.tituloSeccion {
+    color: white;
+    margin: 0;
+    background-color: #308cc8;
+    width: 30%;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+.subtitulo {
+  color: #313372;
+  margin: 0;
+  font-size: 1.5rem;
+}
+.subtituloTabla {
+  color: #313372;
+  margin: 0;
+  font-size: 0.95rem;
+  padding: 5px;
+}
+.subtituloSeccion {
+  color: #313372;
+  margin: 0;
+}
+/* BOTONES */
+.botones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 15px;
+}
+.internSectionButtoms {
+    border: none;
+    font-size: 1rem;
+    padding: 1% 3% 1% 3%;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    width: 160px;
+    transition: 0.2s;
+    color: #313372;
+    background-color: transparent;
+    border: 2px solid #313372;
+    transition: 0.3s;
+}
+.internSectionButtoms:hover{
+    background-color: #313372;
+    color: white;
+}
+.allButtom {
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  width: 160px;
+  height: min-content;
+  transition: 0.2s;
+  color: #313372;
+  background-color: transparent;
+  border: 2px solid #313372;
+  transition: 0.3s;
+}
+.allButtom:hover{
+  background-color: #313372;
+  color: white;
+}
+/* TABLA */
+.divTabla {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.table {
+    max-width: 80%;
+    min-width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    padding: 10%;
+    text-align: center;
+}
+.th {
+  background-color: #313372;
+  border: 1px solid #dddddd;
+  color: white;
+  text-align: center;
+  padding: 3px;
+}
+.td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 3px;
+}
+.tdetail {
+  border: 1px solid #dddddd;
+  text-decoration: underline;
+  text-align: center;
+  padding: 3px;
+}
+.tr:hover {
+  background-color: #c4dae2;
+  font-weight: bold;
+  cursor:auto;
+}
+.table thead th {
+  font-weight: bold;
+  text-transform: uppercase;
+  width: max-content;
+}
+/* PAGINADO */
+.paginado {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+  gap: 10%
+}
+.botonpag {
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 3% 3% 3% 3%;
+  border: 1px solid #313372;
+  background-color: transparent;
+  color: #313372;
+  cursor: pointer;
+}
+.botonpag:hover {
+  background-color: #313372;
+  color: white;
+  border: solid 1.8px white;
+}
+.botonpag:disabled {
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 3% 3% 3% 3%;
+  background-color: gray;
+  color: white;
+  border: none;
+  cursor: not-allowed;
+}
+.pagina {
+  background-color: #313372;
+  color: white;
+  font-weight: bold;
+  border-radius: 25%;
+  font-size: 1.15rem;
+  border: none;
+}
+.paginaboton {
+  background-color: transparent;
+  color: #313372;
+  font-size: 1.15rem;
+  border: none;
+  cursor: pointer;
+}
+.paginaboton:hover {
+  font-size: 1.2rem;
+  color: #313372;
+}

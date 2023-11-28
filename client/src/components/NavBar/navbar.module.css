@@ -1,0 +1,101 @@
+.contenedorDiv {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    padding: 3% 0% 0% 2%;
+    width: 200px;
+    max-width: 200px;
+    min-width: 200px;
+    min-height: 100vh;
+    border-right: 3px solid #313372;
+}
+.divSeccion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.botonSeccion {
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    font-size: 0.9rem;
+    padding: 3% 5% 3% 5%;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    width: 90%;
+    margin-top: 10%;
+    transition: 0.2s;
+    color: white;
+    background-color: #313372;
+    border: 2px solid #313372;
+    transition: 0.3s;
+}
+.botonNoSeccion {
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    font-size: 0.9rem;
+    padding: 3% 5% 3% 5%;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    width: 90%;
+    margin-top: 10%;
+    transition: 0.2s;
+    color: #313372;
+    background-color: transparent;
+    border: 2px solid #313372;
+    transition: 0.3s;
+}
+.botonNoSeccion:hover{
+    background-color: #313372;
+    color: white;
+}
+.botonNoSeccion:disabled {
+    background-color: gray;
+    color: white;
+    border: 2px solid #9092d1;
+    cursor: not-allowed;
+}
+.desplegable {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-decoration: none;
+}
+.botonSecundario {
+    display: flex;
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    padding: 0% 0% 0% 5%;
+    cursor: pointer;
+    position: relative;
+    width: 85%;
+    transition: 0.2s;
+    color: #313372;
+    background-color: transparent;
+    transition: 0.3s;
+    text-decoration: underline white;
+}
+.botonSecundario:hover{
+    background-color: #5e62d4;
+    color: white;
+    text-decoration: underline #5e62d4;
+}
+.botonSecundarioSelect {
+    display: flex;
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    padding: 0% 0% 0% 5%;
+    cursor: pointer;
+    position: relative;
+    width: 85%;
+    transition: 0.2s;
+    color: white;
+    background-color: #5e62d4;
+    transition: 0.3s;
+    text-decoration: #5e62d4 underline;
+}
