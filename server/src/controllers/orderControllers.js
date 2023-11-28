@@ -9,6 +9,16 @@ const createOrder = async (datos) => {
         throw error; 
     }
 }
+
+const getOrders = async () => {
+    try {
+        const orders = await Order.findAll()
+        return orders
+    } catch (error) {
+        console.error("Error fetching", error);
+        throw error;
+    }
+}
 const updateOrder = async (datos, id) => {
     try {
         const externalNumber = id
@@ -31,5 +41,6 @@ const updateOrder = async (datos, id) => {
 
 module.exports = {
     createOrder,
-    updateOrder
+    updateOrder,
+    getOrders
 }

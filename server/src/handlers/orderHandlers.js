@@ -1,4 +1,4 @@
-const { createOrder, updateOrder } = require("../controllers/orderControllers")
+const { createOrder, updateOrder, getOrders } = require("../controllers/orderControllers")
 
 const createOrderHandler = async (req, res) => {
     try {
@@ -14,6 +14,19 @@ const createOrderHandler = async (req, res) => {
         }
     } catch (error) {
         res.status(500).json({success: false, message: 'Error creating', error });
+    }
+}
+const getAllOrders = async (req, res) => {
+    try {
+        const all = await getOrders()
+        if (all.length > 0) {
+            res.status(200).json({success: true, message: 'Succesfull', allElements: all})
+        }
+        else if (allPreBills.length === 0) {
+            res.status(204).json({success: true, message: 'No find' })
+        }
+    } catch (error) {
+        res.status(500).json({ success: false, message: 'Error get all', error });
     }
 }
 
@@ -38,5 +51,6 @@ const updateOrderHandler = async (req, res) => {
 
 module.exports = {
     createOrderHandler,
-    updateOrderHandler
+    updateOrderHandler,
+    getAllOrders
 }
