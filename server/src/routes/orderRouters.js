@@ -4,7 +4,7 @@ const { updateOrderHandler, createOrderHandler, getAllOrders }= require("../hand
 
 
 ordersRouters.post("/create", createOrderHandler)
-ordersRouters.patch("./update", updateOrderHandler)
+ordersRouters.patch("/update", updateOrderHandler)
 ordersRouters.get("/", getAllOrders)
 
 module.exports = ordersRouters

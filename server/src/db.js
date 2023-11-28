@@ -4,10 +4,15 @@ require("dotenv").config(); //Dependencia para leer archivo .env
 // Importar módulos de Node.js
 const fs = require('fs');
 const path = require('path');
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_DATABASE } = process.env;
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_DATABASE}`, {
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_DATABASE, DB_DEPLOY } = process.env;
+const sequelize = new Sequelize(DB_DEPLOY, {
     logging: false,
     native: false,
+    dialectOptions: {
+        ssl: {
+            require: true
+        }
+    }
 });
 // Obtener el nombre del archivo actual
 const basename = path.basename(__filename);
