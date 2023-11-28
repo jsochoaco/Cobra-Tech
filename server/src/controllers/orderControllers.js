@@ -2,7 +2,7 @@ const {Order} = require("../db.js")
 
 const createOrder = async (datos) => {
     try {
-        const newOrder = await Order.create({datos})
+        const newOrder = await Order.create({data: datos})
         return newOrder
     } catch (error) {
         console.error("Error fetching", error);

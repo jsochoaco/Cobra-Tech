@@ -6,11 +6,11 @@ module.exports = (sequelize) => {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             allowNull: false,
+            primaryKey: true,
           },
           externalOrderNumber: {
             type: DataTypes.STRING,
             allowNull: true,
-            primaryKey: true,
           },
           actual_event: {
             type: DataTypes.STRING,
