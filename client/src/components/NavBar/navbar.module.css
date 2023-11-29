@@ -9,7 +9,7 @@
     max-width: 200px;
     min-width: 200px;
     min-height: 100vh;
-    border-right: 3px solid #313372;
+    border-right: 3px solid black;
 }
 .divSeccion {
     display: flex;
@@ -28,8 +28,8 @@
     margin-top: 10%;
     transition: 0.2s;
     color: white;
-    background-color: #313372;
-    border: 2px solid #313372;
+    background-color: black;
+    border: 2px solid black;
     transition: 0.3s;
 }
 .botonNoSeccion {
@@ -43,19 +43,19 @@
     width: 90%;
     margin-top: 10%;
     transition: 0.2s;
-    color: #313372;
+    color: black;
     background-color: transparent;
-    border: 2px solid #313372;
+    border: 2px solid black;
     transition: 0.3s;
 }
 .botonNoSeccion:hover{
-    background-color: #313372;
+    background-color: black;
     color: white;
 }
 .botonNoSeccion:disabled {
     background-color: gray;
     color: white;
-    border: 2px solid #9092d1;
+    border: 2px solid #070825;
     cursor: not-allowed;
 }
 .desplegable {
@@ -74,15 +74,15 @@
     position: relative;
     width: 85%;
     transition: 0.2s;
-    color: #313372;
+    color: black;
     background-color: transparent;
     transition: 0.3s;
     text-decoration: underline white;
 }
 .botonSecundario:hover{
-    background-color: #5e62d4;
+    background-color: #06072b;
     color: white;
-    text-decoration: underline #5e62d4;
+    text-decoration: underline #06072b;
 }
 .botonSecundarioSelect {
     display: flex;
@@ -95,7 +95,7 @@
     width: 85%;
     transition: 0.2s;
     color: white;
-    background-color: #5e62d4;
+    background-color: #06072b;
     transition: 0.3s;
-    text-decoration: #5e62d4 underline;
+    text-decoration: #06072b underline;
 }

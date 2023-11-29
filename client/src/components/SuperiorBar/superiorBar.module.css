@@ -1,12 +1,12 @@
 .superiorContenedor {
-    background-color: #313372;
+    background-color: black;
     min-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 110px;
-    border-bottom: 3px solid #313372;
+    border-bottom: 3px solid #69696e;
 }
 
 .contenedorwith {
@@ -22,7 +22,7 @@
     width: 50%;
     margin: 0% 0% 0% 3%;
     .logo {
-        width: 105px
+        width: 200px
     }
 }
 .datasection {

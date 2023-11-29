@@ -16,25 +16,25 @@
 .tituloSeccion {
     color: white;
     margin: 0;
-    background-color: #308cc8;
+    background-color: black;
     width: 30%;
     margin-top: 10px;
     text-align: center;
     border-radius: 15px;
 }
 .subtitulo {
-  color: #313372;
+  color: rgb(88, 88, 88);
   margin: 0;
   font-size: 1.5rem;
 }
 .subtituloTabla {
-  color: #313372;
+  color: black;
   margin: 0;
   font-size: 0.95rem;
   padding: 5px;
 }
 .subtituloSeccion {
-  color: #313372;
+  color: black;
   margin: 0;
 }
 /* BOTONES */
@@ -55,13 +55,13 @@
     position: relative;
     width: 160px;
     transition: 0.2s;
-    color: #313372;
+    color: black;
     background-color: transparent;
-    border: 2px solid #313372;
+    border: 2px solid black;
     transition: 0.3s;
 }
 .internSectionButtoms:hover{
-    background-color: #313372;
+    background-color: black;
     color: white;
 }
 .allButtom {
@@ -73,13 +73,13 @@
   width: 160px;
   height: min-content;
   transition: 0.2s;
-  color: #313372;
+  color: black;
   background-color: transparent;
-  border: 2px solid #313372;
+  border: 2px solid black;
   transition: 0.3s;
 }
 .allButtom:hover{
-  background-color: #313372;
+  background-color: black;
   color: white;
 }
 /* TABLA */
@@ -100,7 +100,7 @@
     text-align: center;
 }
 .th {
-  background-color: #313372;
+  background-color: black;
   border: 1px solid #dddddd;
   color: white;
   text-align: center;
@@ -118,7 +118,7 @@
   padding: 3px;
 }
 .tr:hover {
-  background-color: #c4dae2;
+  background-color: #898c8d;
   font-weight: bold;
   cursor:auto;
 }
@@ -142,13 +142,13 @@
   font-size: 1rem;
   border-radius: 5px;
   padding: 3% 3% 3% 3%;
-  border: 1px solid #313372;
+  border: 1px solid black;
   background-color: transparent;
-  color: #313372;
+  color: black;
   cursor: pointer;
 }
 .botonpag:hover {
-  background-color: #313372;
+  background-color: black;
   color: white;
   border: solid 1.8px white;
 }
@@ -163,7 +163,7 @@
   cursor: not-allowed;
 }
 .pagina {
-  background-color: #313372;
+  background-color: black;
   color: white;
   font-weight: bold;
   border-radius: 25%;
@@ -172,12 +172,12 @@
 }
 .paginaboton {
   background-color: transparent;
-  color: #313372;
+  color: black;
   font-size: 1.15rem;
   border: none;
   cursor: pointer;
 }
 .paginaboton:hover {
   font-size: 1.2rem;
-  color: #313372;
+  color: black;
 }

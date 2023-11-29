@@ -9,7 +9,7 @@ const initialState = {
     allClients: [],
     allDeparments: [],
     allCitys: [],
-    allOrders: []
+    allOrdenes: []
 }
 
 
@@ -44,28 +44,10 @@ const rootReducer = (state = initialState, action) => {
           ...state,
           login: action.payload,
       }};
-      case ALL_CLIENTS: {
-        return {
-          ...state,
-          allClients: action.payload.clients
-        }
-      }
-      case GET_CITYS: {
-        return {
-          ...state,
-          allCitys: action.payload.citys
-        }
-      }
-      case GET_DEPARTMENTS: {
-        return {
-          ...state,
-          allDepartments: action.payload.departments
-        }
-      }
       case ALL_ORDER: {
         return {
           ...state,
-          allOrders: action.payload.allElements
+          allOrdenes: action.payload
         }
       }
       default:

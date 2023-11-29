@@ -18,60 +18,14 @@ const NavBar = () => {
                 </NavLink>
             </div>}
             <div className={style.divSeccion}>
-                <NavLink to="/">
-                    <button disabled className={location === "/services" ? (style.botonSeccion):(style.botonNoSeccion)} aria-haspopup="true" data-toggle="dropdown"> Servicios </button>
+                <NavLink to="/ordenes">
+                    <button className={location === "/ordenes" ? (style.botonSeccion):(style.botonNoSeccion)} aria-haspopup="true" data-toggle="dropdown"> Ordenes </button>
                 </NavLink>
-            {location === "/services" && (<div className={style.desplegable}>
+            {/* {location === "/ordenes" && (<div className={style.desplegable}>
             <buttom>Crear servicio</buttom>
             <buttom>Compacto</buttom>
             <buttom>Resumen</buttom>
-            </div>)}
-            </div>
-            <div className={style.divSeccion}>
-                <NavLink to="/">
-                    <button disabled className={location === "/reports" ? (style.botonSeccion):(style.botonNoSeccion)} aria-haspopup="true" data-toggle="dropdown"> Reportes </button>
-                </NavLink>
-            {location === "/reports" && (<div className={style.desplegable}>
-            <buttom>Crear reporte</buttom>
-            <buttom>Compacto</buttom>
-            <buttom>Resumen</buttom>
-            </div>)}
-            </div>
-            <div className={style.divSeccion}>
-                <NavLink to="/quotes">
-                    <button className={location.includes("/quotes") ? (style.botonSeccion):(style.botonNoSeccion)} aria-haspopup="true" data-toggle="dropdown"> Cotizaciones </button>
-                </NavLink>
-                {location.includes("/quotes") && (
-                <div className={style.desplegable}>
-                    <NavLink to={"/quotes/create"}>
-                        <buttom className={ location.includes("/quotes/create") ? style.botonSecundarioSelect: style.botonSecundario}>Crear cotización</buttom>
-                    </NavLink>
-                    <NavLink to={"/quotes/user/"+ userData.id}>
-                        <buttom className={ location.includes("/quotes/user/") ? style.botonSecundarioSelect: style.botonSecundario}>Mis cotizaciones</buttom>
-                    </NavLink>
-                    <NavLink to={"/quotes/all"}>
-                        <buttom className={ location.includes("/quotes/all") ? style.botonSecundarioSelect: style.botonSecundario}>Resumen</buttom>
-                    </NavLink>
-                </div>)}
-            </div>
-            <div className={style.divSeccion}>
-                <NavLink to="/data">
-                    <button className={location === "/data" ? (style.botonSeccion):(style.botonNoSeccion)} aria-haspopup="true" data-toggle="dropdown"> Añade datos </button>
-                </NavLink>
-            {location.includes("/data") && (<div className={style.desplegable}>
-                <NavLink to={"/quotes/create"}>
-                    <buttom className={ location.includes("/quotes/create") ? style.botonSecundarioSelect: style.botonSecundario}>Repuestos</buttom>
-                </NavLink>
-                <NavLink to={"/quotes/user/"+ userData.id}>
-                    <buttom className={ location.includes("/quotes/user/") ? style.botonSecundarioSelect: style.botonSecundario}>Servicios</buttom>
-                </NavLink>
-                <NavLink to={"/data/client"}>
-                    <buttom className={ location.includes("/data/client") ? style.botonSecundarioSelect: style.botonSecundario}>Clientes</buttom>
-                </NavLink>
-                <NavLink to={"/quotes/all"}>
-                    <buttom className={ location.includes("/quotes/all") ? style.botonSecundarioSelect: style.botonSecundario}>Almacenes</buttom>
-                </NavLink>
-            </div>)}
+            </div>)} */}
             </div>
         </div>
         );

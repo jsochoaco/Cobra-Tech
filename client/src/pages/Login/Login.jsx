@@ -54,7 +54,7 @@ const Login = () => {
     return (
         <div className={style.contenedorMayor}>
             <div className={style.contenedor} >
-                <img className={style.logo} src="https://res.cloudinary.com/dfmsezslx/image/upload/v1700522308/TECDE/RefriActive_Img_zfhpl2.png" alt="LogoRefriActive" />
+                <img className={style.logo} src="https://res.cloudinary.com/dfmsezslx/image/upload/v1701212781/Isologonegro_r0r96g.png" alt="LogoRefriActive" />
                 <h1 className={style.titulo}>¡Bienvenido de nuevo!</h1>
                 <h5 className={style.subtitulo}>Ingrese sus credenciales</h5>
                 <form>
@@ -87,9 +87,6 @@ const Login = () => {
                             <div className={style.divmensajePass}>
                                 <span className={style.span}> &#9888; Contraseña incorrecta </span>
                             </div>) : (null)}
-                        <div className={style.divOpciones}>
-                        <Link to='/reset' className={style.olvido}><span>Solicitar cambio de contraseña</span></Link>
-                        </div>
                         {handleRedirect()}
                     </div>
                 </form>
