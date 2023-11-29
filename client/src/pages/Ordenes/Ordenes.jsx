@@ -41,7 +41,7 @@ const Ordenes = () => {
                         <tr className={style.tr} key={orden.id}>
                           <td className={style.td}>{orden.id}</td>
                             <td className={style.td}>{orden.data.eventData.externalOrderNumber}</td>
-                            <td className={style.td}>{orden.actual_event}</td>
+                            <td className={style.td}>{orden.eventName}</td>
                             <td className={style.td}>{orden.data.eventData.sellOrderState.name}</td>
                         </tr>))}
                     </table>
