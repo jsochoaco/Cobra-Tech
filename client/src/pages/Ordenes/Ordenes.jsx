@@ -22,7 +22,6 @@ const Ordenes = () => {
     for (let i = 1; i <= totalPages; i++) {
         pageNumbers.push(i);}
     useEffect(() => {setPagina(1)}, [totalPages]);
-    console.log(orders);
     return (
         <div className={style.divContenedor}>
             <NavBar/>
