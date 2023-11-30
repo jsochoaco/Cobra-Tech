@@ -10,8 +10,8 @@ const Ordenes = () => {
     const dispatch = useDispatch()
     const orders = useSelector((state) => state.allOrdenes)
     useEffect(()=> {
-        dispatch(actions.getAllOrders)
-      }, [])
+        dispatch(actions.getAllOrders())
+      }, [dispatch])
     const [pagina, setPagina] = useState(1)
     const porPagina = 8
     const ultimoElemento = pagina*porPagina

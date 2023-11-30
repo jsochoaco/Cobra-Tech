@@ -1,14 +1,20 @@
 import { ALL_ORDER } from "../action-types";
-import axios from "axios";
 import { url } from "../../App.js";
 
 export const getOrders = () => {
     return async (dispatch) => {
         try {
-            const response = await axios.get(`${url}/orders`);  // Reemplazado el enlace directo con la variable 'url'
+            const response = await fetch(`${url}/orders`);
+            
+            if (!response.ok) {
+                throw new Error(`Error fetching orders: ${response.statusText}`);
+            }
+
+            const data = await response.json();
+
             dispatch({
                 type: ALL_ORDER,
-                payload: response.data.allElements
+                payload: data.allElements
             });
         } catch (error) {
             const errorResponse = {};
