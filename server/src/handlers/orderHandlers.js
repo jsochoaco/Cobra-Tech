@@ -22,7 +22,7 @@ const getAllOrders = async (req, res) => {
         if (all.length > 0) {
             res.status(200).json({success: true, message: 'Succesfull', allElements: all})
         }
-        else if (allPreBills.length === 0) {
+        else if (all.length === 0) {
             res.status(204).json({success: true, message: 'No find' })
         }
     } catch (error) {
