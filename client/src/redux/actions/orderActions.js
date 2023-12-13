@@ -4,7 +4,7 @@ import { url } from "../../App.js";
 export const getOrders = () => {
     return async (dispatch) => {
         try {
-            const response = await fetch(`${url}/orders`);
+            const response = await fetch(`${url}/orders?apiKey=cobra2023`);
             
             if (!response.ok) {
                 throw new Error(`Error fetching orders: ${response.statusText}`);

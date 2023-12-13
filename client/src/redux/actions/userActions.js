@@ -7,7 +7,7 @@ export const loginUser = (userData) => {
     try {
         return async (dispatch) => {
             const response = await axios.post(
-                `${url}/users/login`, userData
+                `${url}/users/login?apiKey=cobra2023`, userData
             )
             dispatch({
                 type: LOGIN,
