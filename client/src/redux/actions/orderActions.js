@@ -9,12 +9,12 @@ export const getOrders = () => {
                 method: 'get',
                 url: url,
                 headers: {
-                  'Content-Type': 'application/json',
-                  'Authorization': "cobra2023"
+                    'Content-Type': 'application/json',
+                    'Authorization': 'cobra2023'
                 }
-              };
-            const response = await axios(config)
-            const data = await response.data;
+            };
+            const response = await axios(config);
+            const data = response.data; // No necesitas await aquí, ya que response.data no es una Promesa
             dispatch({
                 type: ALL_ORDER,
                 payload: data.allElements
@@ -23,7 +23,7 @@ export const getOrders = () => {
             const errorResponse = {};
             errorResponse.error = error.message;
             console.error("Error fetching orders:", errorResponse);
-            return errorResponse;    
+            return errorResponse;
         }
     };
 };
