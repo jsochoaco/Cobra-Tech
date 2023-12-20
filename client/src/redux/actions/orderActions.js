@@ -10,7 +10,7 @@ export const getOrders = () => {
                 url: url,
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': cobra2023
+                    'Authorization': "cobra2023"
                 }
             };
             const response = await axios(config);
