@@ -1,17 +1,20 @@
 import { ALL_ORDER } from "../action-types";
 import { url } from "../../App.js";
+import axios from "axios";
 
 export const getOrders = () => {
     return async (dispatch) => {
         try {
-            const response = await fetch(`${url}/orders?apiKey=cobra2023`);
-            
-            if (!response.ok) {
-                throw new Error(`Error fetching orders: ${response.statusText}`);
-            }
-
-            const data = await response.json();
-
+            const config = {
+                method: 'get',
+                url: url,
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': "cobra2023"
+                }
+              };
+            const response = await axios(config)
+            const data = await response.data;
             dispatch({
                 type: ALL_ORDER,
                 payload: data.allElements

@@ -11,14 +11,14 @@ server.use(cors()); // Cors para permitir solicitudes de diferentes dominios.
 
 // Middleware para verificar la API key en parámetros de consulta
 const apiKeyMiddleware = (req, res, next) => {
-  const apiKey = req.query.apiKey; // asume que la clave está en los parámetros de consulta
-  // Verifica la existencia y validez de la API key
+  const apiKey = req.headers.authorization; 
   if (apiKey && apiKey === 'cobra2023') {
-    next(); // Clave válida, permite la solicitud
+    next();
   } else {
     res.status(401).json({ error: 'Acceso no autorizado' });
   }
 };
+
 
 server.use(apiKeyMiddleware); // Aplicar middleware antes de las rutas
 server.use(routers); // Módulo de rutas importado para manejar las rutas y las solicitudes en la aplicación.
