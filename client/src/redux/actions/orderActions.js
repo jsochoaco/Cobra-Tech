@@ -7,10 +7,10 @@ export const getOrders = () => {
         try {
             const config = {
                 method: 'get',
-                url: url,
+                url: `${url}/orders`,
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': "cobra2023"
+                    'Authorization': 'cobra2023'
                 }
             };
             const response = await axios(config);

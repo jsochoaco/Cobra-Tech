@@ -6,9 +6,16 @@ import {url} from "../../App.js";
 export const loginUser = (userData) => {
     try {
         return async (dispatch) => {
-            const response = await axios.post(
-                `${url}/users/login?apiKey=cobra2023`, userData
-            )
+            const config = {
+                method: 'post',
+                url: `${url}/users/login`,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'cobra2023'
+                },
+                data: userData
+            };
+            const response = await axios(config)
             dispatch({
                 type: LOGIN,
                 payload: response.data
@@ -24,8 +31,15 @@ export const loginUser = (userData) => {
 export const existUser = (email) => {
     try {
         return async (dispatch) => {
-            const response = await axios.get(
-                `${url}/users/email/${email}`)
+            const config = {
+                method: 'get',
+                url: `${url}/users/email/${email}`,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'cobra2023'
+                },
+            };
+            const response = await axios(config)
             dispatch({
                 type: USER_EXIST,
                 payload: response.data
