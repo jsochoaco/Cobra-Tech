@@ -1,4 +1,4 @@
-const { createOrder, updateOrder, getOrders } = require("../controllers/orderControllers")
+const { createOrder, updateOrder, getOrders, sendMessage } = require("../controllers/orderControllers")
 
 const createOrderHandler = async (req, res) => {
     try {
@@ -7,10 +7,11 @@ const createOrderHandler = async (req, res) => {
         const newCreate = await createOrder(datos)
 
         if (!newCreate) {
-            return res.status(208).json({success: false, message: "No pudo ser creado"})
+            res.status(208).json({success: false, message: "No pudo ser creado"})
         }
         else {
-            return res.status(201).json({success: true, message: "Creado", created: newCreate})
+            res.status(201).json({success: true, message: "Creado", created: newCreate})
+            sendMessage(newCreate.data, newCreate.id)
         }
     } catch (error) {
         res.status(500).json({success: false, message: 'Error creating', error });
@@ -47,6 +48,7 @@ const updateOrderHandler = async (req, res) => {
         res.status(500).json({success: false, message: 'Error in update', error });
     }
 }
+
 
 
 module.exports = {
