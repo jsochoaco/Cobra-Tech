@@ -39,23 +39,6 @@ const updateOrder = async (datos, id) => {
         throw error;
     }
 }
-const updateSend = async (id) => {
-    try {
-        const externalNumber = id
-        const order = await Order.findByPk(externalNumber)
-        if(order) {
-            order.send = true
-            await bill.save()
-        }
-        else {
-            return null
-        }
-    }
-    catch (error) {
-        console.error("Error fetching", error);
-        throw error;
-    }
-}
 
 const sendMessage = async (datos, id) => {
     try {
@@ -105,11 +88,9 @@ const sendMessage = async (datos, id) => {
                     'Content-Type': 'application/json'
                 };
                 const responseWpp = await axios.post(urlWpp, dataMensaje, { headers });
-                const {data} = responseWpp
-                const result = data.messages !== undefined && data.messages.message_status
-                if (result === "accepted") {
-                    updateSend(internalId)
-                }
+                // const {data} = responseWpp
+                // const result = data.messages !== undefined && data.messages.message_status
+
             }
             catch (error) {
                 console.error('Error al hacer la solicitud:', error.message);
@@ -127,6 +108,5 @@ module.exports = {
     createOrder,
     updateOrder,
     getOrders,
-    sendMessage,
-    updateSend
+    sendMessage
 }

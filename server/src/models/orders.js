@@ -15,11 +15,6 @@ module.exports = (sequelize) => {
           data : {
             type: DataTypes.JSON,
             allowNull: true
-          },
-          send: {
-            type: DataTypes.BOOLEAN,
-            allowNull: true,
-            defaultValue: false
           }
         }, {
           tableName: 'orders',
