@@ -1,6 +1,7 @@
 const {Order} = require("../db.js")
 require("dotenv").config(); //Dependencia para leer archivo .env
 const { API_KEY_MELONN, TOKEN_META } = process.env;
+const axios = require('axios');
 
 const createOrder = async (datos) => {
     try {
@@ -46,7 +47,6 @@ const sendMessage = async (datos, id) => {
         const data = datos
         if (data.eventName === "SELL_ORDER/RECEIVED_VALID") {
             const external = data.eventData.externalOrderNumber
-            const axios = require('axios');
             const apiUrl = `https://api.melonn.com/prod/api/sell-orders/${external}`;
             const apiKey = API_KEY_MELONN
             try {
@@ -59,7 +59,7 @@ const sendMessage = async (datos, id) => {
                 const datosOrden = response.data
                 const dataMensaje = {
                     messaging_product: "whatsapp",
-                    to: datosOrden.buyer.phoneNumber.replace(/\+/g, ''),
+                    to: datosOrden.buyer.phoneNumber.replace(/\+/, ''),
                     type: "template",
                     template: {
                         name: "novedad",
@@ -90,7 +90,6 @@ const sendMessage = async (datos, id) => {
                 const responseWpp = await axios.post(urlWpp, dataMensaje, { headers });
                 // const {data} = responseWpp
                 // const result = data.messages !== undefined && data.messages.message_status
-
             }
             catch (error) {
                 console.error('Error al hacer la solicitud:', error.message);
