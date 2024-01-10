@@ -3,9 +3,7 @@ const { createOrder, updateOrder, getOrders, sendMessage } = require("../control
 const createOrderHandler = async (req, res) => {
     try {
         const datos = req.body
-
         const newCreate = await createOrder(datos)
-
         if (!newCreate) {
             res.status(208).json({success: false, message: "No pudo ser creado"})
         }
