@@ -46,7 +46,7 @@ const sendMessage = async (datos, id) => {
         const internalId = id
         const data = datos
         if (data.eventName === "SELL_ORDER/RECEIVED_VALID") {
-            const external = data.externalOrderNumber
+            const external = data.created.externalOrderNumber
             const apiUrl = `https://api.melonn.com/prod/api/sell-orders/${external}`;
             const apiKey = API_KEY_MELONN
             try {
